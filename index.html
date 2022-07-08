@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+
+    <style>
+        body{
+            margin: 0px;
+            padding: 50px 100px;
+        }
+        h1{
+            text-align: center;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        .color-change{
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            border: 2px solid blue;
+            border-radius: 50%;
+        }
+        #white{
+            background-color: white;
+        }
+        #aqua{
+            background-color: rgb(0,255,255);
+        }
+        #violet{
+            background-color: rgb(255, 166, 255);
+        }
+        #black{
+            background-color: black;
+        }
+        #color-changer{
+            text-align: right;
+        }
+
+        /* making responsive */
+        @media only screen and (max-width:500px){
+            body{
+                padding: 10px 20px;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="color-changer">
+        <span class="color-change" id="white" onclick="changeBg('#ffffff')"></span>
+        <span class="color-change" id="aqua" onclick="changeBg('rgb(0,255,255)')"></span>
+        <span class="color-change" id="violet" onclick="changeBg('rgb(255,166,255)')"></span>
+        <span class="color-change" id="black" onclick="changeBg('#000000')"></span>
+    </div>
+    <h1 class="text">About Us</h1>
+    <img src="aboutUs.png" alt="image">
+    <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus accusamus natus quisquam quas consequuntur a mollitia itaque magni. Esse maxime mollitia eligendi ab facilis quibusdam nesciunt vitae nobis suscipit a. Ratione, necessitatibus? Dolores neque in sapiente eligendi iusto debitis, omnis possimus, error molestiae praesentium sed sit. Quae, quidem nemo? Doloribus est, consectetur omnis beatae excepturi magni nobis vel, recusandae inventore alias provident. Quam, consequuntur labore. Accusantium voluptatibus cupiditate necessitatibus, veritatis porro natus dolor blanditiis ab reprehenderit, numquam harum aliquam delectus non nobis ipsum? Magni laboriosam tempora ipsa alias? Aspernatur in soluta ipsum consequuntur asperiores, quam laboriosam eum. Cupiditate nihil, officiis, modi iure cum soluta laboriosam nisi commodi ullam ut delectus laborum, sed rem non nulla pariatur quas eveniet culpa quasi provident vero! Facilis labore animi quaerat at beatae eaque. Voluptatibus officiis quos ad nostrum, perspiciatis molestiae voluptatem molestias iste ex dolore quasi explicabo facilis quas ab praesentium adipisci tempore aspernatur, provident maiores sequi repellendus! Esse accusamus illum voluptates, fugiat minima molestias atque unde dicta omnis soluta nemo delectus beatae mollitia veniam quas cupiditate. Numquam cum consequatur odio reprehenderit ut corrupti assumenda, debitis voluptatem placeat eligendi aut asperiores quia laboriosam beatae incidunt doloremque obcaecati non modi, nesciunt iste quae quidem nam! Illo, tempore quaerat incidunt tempora ipsam quis, eveniet a molestias quam pariatur sequi quas corporis porro nesciunt odio ipsa repudiandae alias velit excepturi consequuntur rerum et, beatae itaque. Quam provident, doloribus voluptatum maxime accusamus culpa aspernatur. Cum ea aliquam, eaque placeat at ad tenetur et eligendi, ullam ipsa quod itaque dignissimos praesentium in commodi soluta natus voluptates? Ducimus necessitatibus praesentium itaque, pariatur hic numquam! Inventore natus ad enim eum reiciendis harum neque excepturi quas molestias? Perferendis inventore iste neque, placeat aspernatur rem molestiae rerum voluptas iure voluptatibus, ea adipisci nihil repellendus consequuntur consectetur, sit fuga maiores in culpa dolorum! Voluptatum exercitationem autem officia facere sunt asperiores, doloribus tenetur perspiciatis doloremque, praesentium voluptates eaque. Optio ipsum possimus magni corrupti molestiae nobis, nulla exercitationem et modi nisi hic magnam omnis dolor voluptatum in ab neque asperiores. Ut excepturi praesentium facilis vitae cum veritatis eum nihil dicta laboriosam sequi delectus harum eligendi hic impedit recusandae velit deleniti rem, aut, optio quo iusto modi sapiente assumenda odio. Nihil dolores vel ducimus velit iusto consequuntur nostrum illum mollitia nulla animi officia adipisci et, corporis deleniti sapiente sed? Nulla exercitationem cumque sit ab tempora expedita dolores, eaque incidunt atque amet laudantium nihil ex quis magni facilis necessitatibus eligendi aperiam quibusdam tempore quos! Itaque ea commodi odit. Totam provident natus quos aperiam, dolores aspernatur voluptatibus cumque doloremque, voluptates quibusdam non, quidem eius illum ex? Odit laboriosam animi mollitia a optio ut reprehenderit corporis molestias minima. Possimus earum nostrum, voluptatum cumque quo vero vel optio voluptate aperiam reiciendis dicta sequi, distinctio impedit, qui mollitia corporis fugiat tenetur labore et consequatur amet. Veritatis provident, molestiae reprehenderit repellendus molestias, amet accusamus assumenda accusantium consequuntur quaerat voluptatibus unde magni soluta quisquam rem deserunt suscipit officiis perferendis. Nam aspernatur accusantium harum, dolor iusto hic possimus est cumque quibusdam facere. Nesciunt, itaque sunt!
+    </p>
+
+    <script>
+        function changeBg(color){
+            document.body.style.backgroundColor = color;
+            let text = document.getElementsByClassName('text');
+            if(color == '#000000'){
+                for(let i of text){
+                    i.style.color = '#ffffff';
+                }
+            }
+            else{
+                for(let i of text){
+                    i.style.color = '#000000';
+                }
+            }
+            
+        }
+        
+        
+    </script>
+
+
+</body>
+</html>
